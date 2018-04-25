@@ -24,6 +24,8 @@
   		// on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
   		$_SESSION['login'] = $_POST['login'];
   		$_SESSION['pwd'] = $_POST['pwd'];
+     
+     
   
   		// on redirige notre visiteur vers une page de notre section membre
   		header ('location: page_membre.php');
