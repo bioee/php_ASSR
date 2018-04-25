@@ -7,5 +7,5 @@ CREATE TABLE projet_assr_php.user
 	    mail varchar(255),
 	    password varchar(255),
 	    date_authent TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	    admin BOOLEAN    
+	    admin BOOLEAN DEFAULT 0
 )
