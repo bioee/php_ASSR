@@ -3,8 +3,8 @@
 
             <ul>
 	            <li><a href="#" >Accueil</a></li>
-                <li><a href="#" >Accueil</a></li>
-                <li><a href="#" >Accueil</a></li>
+                <li><a href="#" >Toto</a></li>
+                <li><a href="#" >Aide</a></li>
             </ul>
 
 		</div>    
