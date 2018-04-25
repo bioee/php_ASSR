@@ -1,44 +1,45 @@
-<!DOCTYPE html> 
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
 <html>
-    <head lang="fr">        
+    <head lang="fr">
 	<?php include("entete.php"); ?>
     </head>
-     <body>             
+     <body>
 	 <?php include("menu.php"); ?>
-	 
-	 
-	 <?php
-	 
-	$login_valide = "moi";
-	$pwd_valide = "lemien";
-	
 
-if (isset($_POST['login']) && isset($_POST['pwd'])) {
+         <?php
+            if (!isset($_SESSION['login'])) :
+                ?>
+                <!-- s'identifier / s'inscrire -->
+                <ul>
+                    <li><a href="form.php">S'identifier</a></li>
+                </ul>
 
-	// on vÃ©rifie les informations du formulaire, Ã  savoir si le pseudo saisi est bien un pseudo autorisÃ©, de mÃªme pour le mot de passe
-  	 if ($login_valide == $_POST['login'] && $pwd_valide == $_POST['pwd']) {
-      		// début de session
-       		session_start ();    		
-      		$_SESSION['login'] = $_POST['login'];
-      		$_SESSION['pwd'] = $_POST['pwd'];
-         
-         echo "vous etes déja authentifié :) <br>";
-     }else{
-          echo "Login ou mot de passe non valide <br>";
-          include("form.php");
-     }
-}else{
-  		include("form.php");
-}
-	?>
- 
- 
- 
- 
-	
+                <?php
+            else :
+                $utilisateur = $_SESSION['login'];
+                ?>
+
+                <ul>
+                    <li><?= $utilisateur ?></li>
+                    <li> <a role='button' title="DÃ©connection." href="login_deconnect.php" >
+                            <!-- <img src="images/deconnection.png" alt=""/> -->
+                            Deconnection
+                         </a>
+                    </li>
+                </ul>
+
+
+            <?php
+            endif;
+            ?>
+
+
 	  <?php include("pied.php"); ?>
-	
-	
-	*/ ?>
-	  </body> 
+
+	  </body>
 </html>
