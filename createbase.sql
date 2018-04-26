@@ -10,4 +10,4 @@ CREATE TABLE projet_assr_php.user
     );
 
 CREATE USER 'user_assr_php'@'localhost' IDENTIFIED BY 'mdpASSR';
-GRANT ALL PRIVILEGES ON projet_assr_php.user TO ''user_assr_php'@'localhost';
+GRANT ALL PRIVILEGES ON projet_assr_php.user TO 'user_assr_php'@'localhost';
