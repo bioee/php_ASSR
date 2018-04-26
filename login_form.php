@@ -1,7 +1,7 @@
 <?php
 session_start();
 // si l'utilisateur est déjà entré , l'utilisateur est donc deja connecté > redirection
-	if (isset($_SESSION['login'])) {
+	if (isset($_SESSION['id'])) {
 		header("Location: Main.php");
     	}
 ?>

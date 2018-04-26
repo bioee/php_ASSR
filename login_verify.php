@@ -24,6 +24,7 @@ if (empty($login) || empty($password)) {
     if ($sth->rowCount() != 0) {
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         session_start();
+        $_SESSION['id'] = session_id();
         $_SESSION['id_user'] = $row['id_user'];
         $_SESSION['login'] = $row['login'];
         $_SESSION['mail'] = $row['mail'];

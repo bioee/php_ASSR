@@ -6,15 +6,15 @@
                 <li><a href="#" >Aide</a></li>
 
          <?php
-            if (!isset($_SESSION['login'])) :
+            if (!isset($_SESSION['id'])) :
                 ?>
 
                 <!-- s'identifier / s'inscrire -->
-                    <li><a href="form.php">S'identifier</a></li>
+                    <li><a href="login_form.php">S'identifier</a></li>
 
                 <?php
             else :
-                $utilisateur = $_SESSION['login'];
+                $utilisateur = $_SESSION['id'];
                 ?>
 
                     <li><?= $utilisateur ?></li>
