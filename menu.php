@@ -6,29 +6,13 @@
                 <li><a href="#" >Aide</a></li>
 
          <?php
-            if (!isset($_SESSION['id'])) :
-                ?>
-
-                <!-- s'identifier / s'inscrire -->
-                    <li><a href="login_form.php">S'identifier</a></li>
-
-                <?php
-            else :
-                $utilisateur = $_SESSION['id'];
-                ?>
-
-                    <li><?= $utilisateur ?></li>
-                    <li> <a role='button' title="Déconnection." href="login_deconnect.php" >
-                            <!-- <img src="images/deconnection.png" alt=""/> -->
-                            Deconnection
-                         </a>
-                    </li>
-
-
-            <?php
-            endif;
+            if (!isset($_SESSION['id'])){ // useur non authentifi�:
+                    echo "<li><a href=\"login_form.php\">S'identifier</a></li>" ;
+            }else{
+                    echo "<li><p> bonjour ".$_SESSION['login']."</p></li>" ;
+                    echo "<li> <a role='button' title=\"Déconnection.\" href=\"login_deconnect.php\" >Deconnection</a></li>" ;
+            } 
             ?>
-
             </ul>
 
 		</div>    

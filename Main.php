@@ -13,4 +13,6 @@ session_start();
         <?php include("menu.php"); ?>
         <?php include("pied.php"); ?>
     </body>
+    
+    
 </html>
