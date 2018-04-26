@@ -1,13 +1,11 @@
 <?php
-header("Location: Main.php");
+//header("Location: Main.php");
 
 // on detruit la session:
 $_SESSION = array();
 session_destroy();
 ?> 
 
-
-?>
 
 
 <!-- Si on veut afficher une page de déconnection -->
