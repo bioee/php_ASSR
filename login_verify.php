@@ -1,6 +1,6 @@
 <?php
 
-// vérification des parametres login/motdepasse 
+// vÃ©rification des parametres login/password 
 $login = filter_input(INPUT_POST, 'login', FILTER_UNSAFE_RAW);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
 
@@ -9,7 +9,7 @@ if (empty($login) || empty($password)) {
     header('Location: form.php');
     exit;
 } else {
-// connexion à la base de données
+// connexion Ã  la base de donnÃ©es
     require 'connexionbase.php';
 
 
@@ -21,7 +21,7 @@ if (empty($login) || empty($password)) {
     $sth = $dbh->prepare($query);
     $sth->execute();
 
-// $_SESSION Utilisera un cookie cot� client valable le temps de la dur�e de vie du navigateur
+// $_SESSION Utilisera un cookie coté client valable le temps de la durée de vie du navigateur
     if ($sth->rowCount() != 0) {
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         session_start();
@@ -31,7 +31,7 @@ if (empty($login) || empty($password)) {
         $_SESSION['date_authent'] = $row['date_authent'];
         $_SESSION['admin'] = $row['admin'];
         
-        // OK => accès au contenu
+        // OK => accÃ¨s au contenu
         header('Location: Main.php');
         exit;
     } else {
