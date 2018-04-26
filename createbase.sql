@@ -9,5 +9,5 @@ CREATE TABLE projet_assr_php.user
     admin BOOLEAN DEFAULT 0
     );
 
-CREATE USER ''user_assr_php'@'localhost' IDENTIFIED BY 'mdpASSR';
+CREATE USER 'user_assr_php'@'localhost' IDENTIFIED BY 'mdpASSR';
 GRANT ALL PRIVILEGES ON projet_assr_php.user TO ''user_assr_php'@'localhost';
