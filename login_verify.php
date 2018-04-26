@@ -21,14 +21,13 @@ if (empty($login) || empty($password)) {
     $sth = $dbh->prepare($query);
     $sth->execute();
 
+// $_SESSION Utilisera un cookie coté client valable le temps de la durée de vie du navigateur
     if ($sth->rowCount() != 0) {
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         session_start();
-        $_SESSION['id'] = session_id();
-        $_SESSION['id_user'] = $row['id_user'];
+        $_SESSION['id'] = $row['id_user'];
         $_SESSION['login'] = $row['login'];
         $_SESSION['mail'] = $row['mail'];
-        $_SESSION['password'] = $row['password'];
         $_SESSION['date_authent'] = $row['date_authent'];
         $_SESSION['admin'] = $row['admin'];
         
