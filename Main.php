@@ -11,6 +11,13 @@ session_start();
 
     <body>
         <?php include("menu.php"); ?>
+        
+        <?php if (isset($_SESSION['id'])){ #si user authentifié on peut participer au chat 
+                include("chat.php"); 
+              } ?>
+        
+        
+        
         <?php include("pied.php"); ?>
     </body>
     
