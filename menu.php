@@ -10,7 +10,7 @@
                     echo "<li><a href=\"login_form.php\">S'identifier</a></li>" ;
             }else{
                     // echo "<li><p> Bonjour ".$_SESSION['login']."</p></li>" ;
-                    echo "Bonjour ".$_SESSION['login']. "" ;
+                    echo "<p1> Bonjour ".$_SESSION['login']. "<p1>" ;
                     echo "<a href=\"login_deconnect.php\" > <img src='images/logout.png' align='right' alt='deconnection' /> </a>" ;
             } 
             ?>
