@@ -4,10 +4,11 @@ require 'connexionbase.php';
 
 #ajout des nouveaux messages:
 if (isset($_POST['message']) && $_POST['message'] != ""){ 
-     $query =  "INSERT INTO chat (id_msg, msg) VALUES (NULL, '".$_POST['message']."');" ;
+     $msg = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+     $query =  "INSERT INTO chat (id_msg, msg) VALUES (NULL, '".$msg."');" ;
      $sth = $dbh->prepare($query);
      $sth->execute();
-}            
+}              
     
 #recuperatio et affichage des messages:
 $query =   "SELECT id_msg, msg FROM chat;" ;              
