@@ -2,10 +2,10 @@
 Site rapide en php
 
 ## phpmyadmin 
-apt-get install phpmyadmin 
-aller sur 127.0.0.1/phpmyadmin
-entrer login : root 
-mdp : mdpcreerdurantlinstallationdephpmyadmin
+* apt-get install phpmyadmin 
+* aller sur 127.0.0.1/phpmyadmin
+* entrer login : root 
+* mdp : mdpcreerdurantlinstallationdephpmyadmin
 
 ## createbase.sql
 Aller dans phpmyadmin > import > parcourir , prendre le fichier createbase.sql > go
