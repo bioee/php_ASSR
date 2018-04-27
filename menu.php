@@ -9,8 +9,9 @@
             if (!isset($_SESSION['id'])){ // useur non authentifié:
                     echo "<li><a href=\"login_form.php\">S'identifier</a></li>" ;
             }else{
-                    echo "<li> <a href=\"login_deconnect.php\" >Deconnection</a></li>" ;
-                    echo "<li><p> bonjour ".$_SESSION['login']."</p></li>" ;
+                    // echo "<li><p> Bonjour ".$_SESSION['login']."</p></li>" ;
+                    echo "Bonjour ".$_SESSION['login']. "" ;
+                    echo "<a href=\"login_deconnect.php\" > <img src='images/logout.png' align='right' alt='deconnection' /> </a>" ;
             } 
             ?>
             </ul>
