@@ -3,7 +3,6 @@ DROP DATABASE projet_assr_php;
 CREATE DATABASE projet_assr_php;
 CREATE USER 'user_assr_php'@'localhost' IDENTIFIED BY 'mdpASSR';
 
-
 CREATE TABLE projet_assr_php.user
     (
     id_user INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
