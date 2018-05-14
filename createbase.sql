@@ -1,3 +1,5 @@
+DROP DATABASE projet_assr_php;
+
 CREATE DATABASE projet_assr_php;
 CREATE USER 'user_assr_php'@'localhost' IDENTIFIED BY 'mdpASSR';
 
