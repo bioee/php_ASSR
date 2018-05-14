@@ -15,6 +15,6 @@ if (empty($login) OR empty($password) OR empty($mail)) {
     $sth = $dbh->prepare($query);
     $sth->execute();
 }
-
+header('Location: ../Main.php');
  	
 ?>
