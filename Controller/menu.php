@@ -8,6 +8,7 @@
          <?php
             if (!isset($_SESSION['id'])){ // useur non authentifié:
                     echo "<li><a href=\"Controller/login_form.php\">S'identifier</a></li>" ;
+                    echo "<li><a href=\"Controller/create_form.php\">Creer un nouvel utilisateur</a></li>" ;
             }else{
                     // echo "<li><p> Bonjour ".$_SESSION['login']."</p></li>" ;
                     echo "<p1> Bonjour ".$_SESSION['login']. "<p1>" ;
