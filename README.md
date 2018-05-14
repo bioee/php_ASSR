@@ -8,7 +8,7 @@ Site rapide en php
 * mdp : mdpcreerdurantlinstallationdephpmyadmin
 
 ## createbase.sql
-Aller dans phpmyadmin > import > parcourir , prendre le fichier createbase.sql > go
+Aller dans phpmyadmin > import > parcourir , prendre le fichier Modele/createbase.sql > go
 
 Normalement une base nommée projet_assr_php contenant la table user est créée
 
