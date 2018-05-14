@@ -11,7 +11,7 @@ if (empty($login) OR empty($password) OR empty($mail)) {
 }else{
     require 'connexionbase.php';
     $query =  "INSERT INTO projet_assr_php.user (`id_user`, `login`, `mail`, `password`) 
-              VALUES (NULL,$login ,$mail ,$password)";    
+              VALUES (NULL,'$login' ,'$mail' ,'$password')";    
     $sth = $dbh->prepare($query);
     $sth->execute();
 }

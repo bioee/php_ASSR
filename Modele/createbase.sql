@@ -12,7 +12,7 @@ CREATE TABLE projet_assr_php.user
     date_authent TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     admin BOOLEAN DEFAULT 0
     );
-INSERT INTO projet_assr_php.user (`id_user`, `login`, `mail`, `password`) VALUES (NULL,'user','user@user.local','user');
+-- ON NE CREE PAS D'USER ICI CAR LES MOTS DE PASSE SONT HASHES PAR PHP
 GRANT ALL PRIVILEGES ON projet_assr_php.user TO 'user_assr_php'@'localhost';
 
 
