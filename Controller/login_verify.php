@@ -32,7 +32,7 @@ if (empty($login) || empty($password)) {
         $_SESSION['admin'] = $row['admin'];
         
         // OK => accÃ¨s au contenu
-        header('Location: Main.php');
+        header('Location: ../Main.php');
         exit;
     } else {
         // KO => page d'erreur

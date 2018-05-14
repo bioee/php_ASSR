@@ -7,11 +7,11 @@
 
          <?php
             if (!isset($_SESSION['id'])){ // useur non authentifié:
-                    echo "<li><a href=\"login_form.php\">S'identifier</a></li>" ;
+                    echo "<li><a href=\"Controller/login_form.php\">S'identifier</a></li>" ;
             }else{
                     // echo "<li><p> Bonjour ".$_SESSION['login']."</p></li>" ;
                     echo "<p1> Bonjour ".$_SESSION['login']. "<p1>" ;
-                    echo "<a href=\"login_deconnect.php\" > <img src='images/logout.png' align='right' alt='deconnection' /> </a>" ;
+                    echo "<a href=\"Controller/login_deconnect.php\" > <img src='images/logout.png' align='right' alt='deconnection' /> </a>" ;
             } 
             ?>
             </ul>
