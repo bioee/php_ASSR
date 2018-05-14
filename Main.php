@@ -6,19 +6,19 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head lang="fr">
-        <?php include("entete.php"); ?>
+        <?php include("Controller/entete.php"); ?>
     </head>
 
     <body>
-        <?php include("menu.php"); ?>
+        <?php include("Controller/menu.php"); ?>
         
-        <?php if (isset($_SESSION['id'])){ #si user authentifié on peut participer au chat 
-                include("chat.php"); 
+        <?php if (isset($_SESSION['id'])){ #si user authentifiï¿½ on peut participer au chat 
+                include("Controller/chat.php"); 
               } ?>
         
         
         
-        <?php include("pied.php"); ?>
+        <?php include("Controller/pied.php"); ?>
     </body>
     
     
