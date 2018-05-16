@@ -2,6 +2,7 @@
 
 $login = filter_input(INPUT_POST, 'login', FILTER_UNSAFE_RAW);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
+// password_hash() permet de hasher le mot de passe, PASSWORD_DEFAULT est le dernier hashage recommandé par la version php utilisé
 $password = password_hash($password , PASSWORD_DEFAULT);
 $mail = filter_input(INPUT_POST, 'mail', FILTER_UNSAFE_RAW);
 

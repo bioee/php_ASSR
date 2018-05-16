@@ -23,6 +23,8 @@ if (empty($login) || empty($password)) {
 // $_SESSION Utilisera un cookie coté client valable le temps de la durée de vie du navigateur
     if ($sth->rowCount() != 0){
       $row = $sth->fetch(PDO::FETCH_ASSOC);
+      // password_verify est complémentaire de password_hash() utilisé dans Controller/create_verify.php
+      // il permet de vérifier la concordance entre les mots de passe malgré le hashage
       if(password_verify($password, $row['password'])) {
         session_start();
         $_SESSION['id'] = $row['id_user'];
