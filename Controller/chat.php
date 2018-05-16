@@ -16,15 +16,19 @@ $sth = $dbh->prepare($query);
 $sth->execute();
 if ($sth->rowCount() > 1) {
     foreach ($sth as $row) {
-        echo "ID: ".$row['id_msg']."<br>";
-        echo "USER: ".$row['user']."<br>";
-        echo "MESSAGE: ".$row['msg']."<br>";
+        echo "<div style=\"color:#0000FF\">";
+        echo "<p>ID: ".$row['id_msg']."<br></p>";
+        echo "<p>USER: ".$row['user']."<br></p>";
+        echo "<h3>MESSAGE: ".$row['msg']."<br></h3>";
+        echo "</div>";
     }
 } elseif ($sth->rowCount() == 1) {
     $result = $sth->fetch(PDO::FETCH_ASSOC);
+    echo "<div style=\"color:#0000FF\">";
     echo "ID: ".$result['id_msg']."<br>";
     echo "USER: ".$row['user']."<br>";
     echo "MESSAGE: ".$result['msg']."<br>";
+    echo "</div>";
 }
 ?>
 
