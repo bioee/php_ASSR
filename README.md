@@ -50,7 +50,7 @@ Interdir les requet POST trop supérieur à 1Ko
 post_max_size=1K
 
 Amoindrire les attaques DDOS
-# configuré en seconds
+#configuré en seconds
 max_execution_time =
 max_input_time = 30
 memory_limit = 40M
